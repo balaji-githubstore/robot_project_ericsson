@@ -1,7 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
 
-
 *** Test Cases ***
 TC1 Upload File
     Open Browser    browser=chrome    executable_path=${EXECDIR}${/}driver${/}chromedriver.exe
