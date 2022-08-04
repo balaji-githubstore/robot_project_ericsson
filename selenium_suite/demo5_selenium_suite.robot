@@ -1,5 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
+Library    OperatingSystem
 
 *** Test Cases ***
 TC1 Upload File
@@ -41,7 +42,8 @@ TC4 CSS Selector
     Click Element    css=#login-button
 
 TC5 malaysiaairlines 
-    Open Browser    browser=chrome    executable_path=${EXECDIR}${/}driver${/}chromedriver.exe
+    Open Browser    browser=chrome    executable_path=${EXECDIR}${/}driver${/}chromedriver.exe        
+    ...    options=add_argument("--disable-notifications")
     Maximize Browser Window
     Set Selenium Implicit Wait    20s
     Go To    url=https://www.malaysiaairlines.com/in/en.html
@@ -91,4 +93,51 @@ TC6 PhP Travel
     Execute Javascript    arguments[0].value='13-08-2022'    ARGUMENTS    ${ele}    
 
 
+TC7 Royal
+    Open Browser    browser=chrome    executable_path=${EXECDIR}${/}driver${/}chromedriver.exe
+    Maximize Browser Window
+    Set Selenium Implicit Wait    30s
+    Set Selenium Speed    1s
+    Go To    url=https://www.royalcaribbean.com/
+    Run Keyword And Ignore Error    Click Element    xpath=//*[name()='svg' and @class='email-capture__close']
+    Click Element    id=rciHeaderSignIn      
+    Click Element    link=Create an account
+    Input Text    xpath=//input[@data-placeholder="First name/Given name"]    Balaji
+    Click Element    xpath=//span[text()='Month']
+    Click Element    xpath=//span[contains(text(),'April')]
+
+TC8 Download
+    Open Browser    browser=chrome    executable_path=${EXECDIR}${/}driver${/}chromedriver.exe
+    Maximize Browser Window
+    Set Selenium Implicit Wait    30s
+    Set Selenium Speed    1s
+    Go To    url=https://www.selenium.dev/downloads/
+    Click Element    link=32 bit Windows IE
+    ${username}    Get Environment Variable    USERNAME
+    Log To Console    ${username} 
+    File Should Exist    path=C:${/}Users${/}${username}${/}Downloads${/}IEDriverServer_Win32_4.3.0.zip
+
+TC9 Download
+    &{pref}    Create Dictionary    download.default_directory=${EXECDIR}${/}files
+
+    Open Browser    browser=chrome    executable_path=${EXECDIR}${/}driver${/}chromedriver.exe        
+    ...    options=add_experimental_option("prefs",${pref})
+     Set Selenium Implicit Wait    30s
+    Set Selenium Speed    1s
+    Go To    url=https://www.selenium.dev/downloads/
+    Click Element    link=32 bit Windows IE
+    File Should Exist    path=${EXECDIR}${/}files${/}IEDriverServer_Win32_4.3.0.zip
     
+
+TC10 
+    Open Browser    browser=chrome    alias=b1    executable_path=${EXECDIR}${/}driver${/}chromedriver.exe 
+    Go To    url=https://www.google.co.in/
+
+    Open Browser    browser=chrome    alias=b2    executable_path=${EXECDIR}${/}driver${/}chromedriver.exe 
+    Go To    url=https://www.facebook.com/
+
+    # Close Browser
+    Switch Browser    b1
+    Click Element    tag=a
+
+    Close All Browsers

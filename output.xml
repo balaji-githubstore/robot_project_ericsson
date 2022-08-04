@@ -1,180 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.2 on win32)" generated="20220803 19:48:08.451" rpa="false" schemaversion="3">
-<suite id="s1" name="Demo5 Selenium Suite" source="d:\Mine\Company\Ericsson3\robot_project\selenium_suite\demo5_selenium_suite.robot">
-<test id="s1-t1" name="TC6 PhP Travel" line="81">
+<robot generator="Robot 5.0.1 (Python 3.10.2 on win32)" generated="20220805 00:02:02.726" rpa="false" schemaversion="3">
+<suite id="s1" name="Demo3 Alert Suite">
+<suite id="s1-s1" name="Demo3 Alert Suite" source="D:\Mine\Company\Ericsson3\robot_project\selenium_suite\demo3_alert_suite.robot">
+<test id="s1-s1-t1" name="TC1" line="6">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=chrome</arg>
 <arg>executable_path=${EXECDIR}${/}driver${/}chromedriver.exe</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220803 19:48:08.855" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220803 19:48:08.854" endtime="20220803 19:48:11.173"/>
+<msg timestamp="20220805 00:02:03.166" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220805 00:02:03.166" endtime="20220805 00:02:05.028"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220803 19:48:11.174" endtime="20220803 19:48:11.308"/>
+<status status="PASS" starttime="20220805 00:02:05.029" endtime="20220805 00:02:05.154"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>20s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220803 19:48:11.309" endtime="20220803 19:48:11.314"/>
+<status status="PASS" starttime="20220805 00:02:05.155" endtime="20220805 00:02:05.157"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
-<arg>url=https://phptravels.net/</arg>
+<arg>url=https://netbanking.hdfcbank.com/netbanking/IpinResetUsingOTP.htm</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220803 19:48:11.315" level="INFO">Opening url 'https://phptravels.net/'</msg>
-<status status="PASS" starttime="20220803 19:48:11.315" endtime="20220803 19:49:11.434"/>
+<msg timestamp="20220805 00:02:05.158" level="INFO">Opening url 'https://netbanking.hdfcbank.com/netbanking/IpinResetUsingOTP.htm'</msg>
+<status status="PASS" starttime="20220805 00:02:05.157" endtime="20220805 00:02:07.280"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//span[contains(text(),'Search by City')]</arg>
+<arg>xpath=//img[@alt='Go']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220803 19:49:11.491" level="INFO">Clicking element 'xpath=//span[contains(text(),'Search by City')]'.</msg>
-<msg timestamp="20220803 19:49:11.552" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=103.0.5060.134)
-Stacktrace:
-Backtrace:
-	Ordinal0 [0x002F6463+2188387]
-	Ordinal0 [0x0028E461+1762401]
-	Ordinal0 [0x001A3D78+802168]
-	Ordinal0 [0x0018C680+706176]
-	Ordinal0 [0x001EF169+1110377]
-	Ordinal0 [0x001FC3C2+1164226]
-	Ordinal0 [0x001EC5F6+1099254]
-	Ordinal0 [0x001C6BE0+945120]
-	Ordinal0 [0x001C7AD6+948950]
-	GetHandleVerifier [0x005971F2+2712546]
-	GetHandleVerifier [0x0058886D+2652765]
-	GetHandleVerifier [0x0038002A+520730]
-	GetHandleVerifier [0x0037EE06+516086]
-	Ordinal0 [0x0029468B+1787531]
-	Ordinal0 [0x00298E88+1805960]
-	Ordinal0 [0x00298F75+1806197]
-	Ordinal0 [0x002A1DF1+1842673]
-	BaseThreadInitThunk [0x749B6359+25]
-	RtlGetAppContainerNamedObjectPath [0x77208944+228]
-	RtlGetAppContainerNamedObjectPath [0x77208914+180]
-	(No symbol) [0x00000000]
-</msg>
-<msg timestamp="20220803 19:49:11.591" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=103.0.5060.134)
-Stacktrace:
-Backtrace:
-	Ordinal0 [0x002F6463+2188387]
-	Ordinal0 [0x0028E461+1762401]
-	Ordinal0 [0x001A3D78+802168]
-	Ordinal0 [0x0018C680+706176]
-	Ordinal0 [0x001EF169+1110377]
-	Ordinal0 [0x001FC3C2+1164226]
-	Ordinal0 [0x001EC5F6+1099254]
-	Ordinal0 [0x001C6BE0+945120]
-	Ordinal0 [0x001C7AD6+948950]
-	GetHandleVerifier [0x005971F2+2712546]
-	GetHandleVerifier [0x0058886D+2652765]
-	GetHandleVerifier [0x0038002A+520730]
-	GetHandleVerifier [0x0037EE06+516086]
-	Ordinal0 [0x0029468B+1787531]
-	Ordinal0 [0x00298E88+1805960]
-	Ordinal0 [0x00298F75+1806197]
-	Ordinal0 [0x002A1DF1+1842673]
-	BaseThreadInitThunk [0x749B6359+25]
-	RtlGetAppContainerNamedObjectPath [0x77208944+228]
-	RtlGetAppContainerNamedObjectPath [0x77208914+180]
-	(No symbol) [0x00000000]
-</msg>
-<status status="FAIL" starttime="20220803 19:49:11.488" endtime="20220803 19:49:11.930"/>
+<msg timestamp="20220805 00:02:07.281" level="INFO">Clicking element 'xpath=//img[@alt='Go']'.</msg>
+<status status="PASS" starttime="20220805 00:02:07.281" endtime="20220805 00:02:07.355"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>xpath=//input[@aria-controls='select2-hotels_city-results']</arg>
-<arg>chennai</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220803 19:49:11.932" endtime="20220803 19:49:11.932"/>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<var>${alert_text}</var>
+<arg>action=DISMISS</arg>
+<arg>timeout=40s</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<msg timestamp="20220805 00:02:07.357" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:40</msg>
+<msg timestamp="20220805 00:02:07.364" level="INFO">${alert_text} = Customer ID  cannot be left blank.</msg>
+<status status="PASS" starttime="20220805 00:02:07.356" endtime="20220805 00:02:07.364"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//li[text()='Chennai,India']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220803 19:49:11.933" endtime="20220803 19:49:11.933"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${alert_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220805 00:02:07.365" endtime="20220805 00:02:07.366"/>
 </kw>
-<kw name="Get WebElement" library="SeleniumLibrary">
-<var>${ele}</var>
-<arg>xpath=//input[@id='checkin']</arg>
-<doc>Returns the first WebElement matching the given ``locator``.</doc>
-<status status="NOT RUN" starttime="20220803 19:49:11.934" endtime="20220803 19:49:11.934"/>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${alert_text}</arg>
+<arg>Customer ID${SPACE}${SPACE}cannot be left blank.</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20220805 00:02:07.366" endtime="20220805 00:02:07.367"/>
 </kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>arguments[0].value='13-08-2022'</arg>
-<arg>ARGUMENTS</arg>
-<arg>${ele}</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="NOT RUN" starttime="20220803 19:49:11.934" endtime="20220803 19:49:11.935"/>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220805 00:02:07.367" endtime="20220805 00:02:09.861"/>
 </kw>
-<status status="FAIL" starttime="20220803 19:48:08.853" endtime="20220803 19:49:11.937">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=103.0.5060.134)
-Stacktrace:
-Backtrace:
-	Ordinal0 [0x002F6463+2188387]
-	Ordinal0 [0x0028E461+1762401]
-	Ordinal0 [0x001A3D78+802168]
-	Ordinal0 [0x0018C680+706176]
-	Ordinal0 [0x001EF169+1110377]
-	Ordinal0 [0x001FC3C2+1164226]
-	Ordinal0 [0x001EC5F6+1099254]
-	Ordinal0 [0x001C6BE0+945120]
-	Ordinal0 [0x001C7AD6+948950]
-	GetHandleVerifier [0x005971F2+2712546]
-	GetHandleVerifier [0x0058886D+2652765]
-	GetHandleVerifier [0x0038002A+520730]
-	GetHandleVerifier [0x0037EE06+516086]
-	Ordinal0 [0x0029468B+1787531]
-	Ordinal0 [0x00298E88+1805960]
-	Ordinal0 [0x00298F75+1806197]
-	Ordinal0 [0x002A1DF1+1842673]
-	BaseThreadInitThunk [0x749B6359+25]
-	RtlGetAppContainerNamedObjectPath [0x77208944+228]
-	RtlGetAppContainerNamedObjectPath [0x77208914+180]
-	(No symbol) [0x00000000]
-</status>
+<tag>5</tag>
+<tag>OP-5</tag>
+<status status="PASS" starttime="20220805 00:02:03.165" endtime="20220805 00:02:09.861"/>
 </test>
-<status status="FAIL" starttime="20220803 19:48:08.454" endtime="20220803 19:49:11.944"/>
+<test id="s1-s1-t2" name="TC2" line="19">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<arg>executable_path=${EXECDIR}${/}driver${/}chromedriver.exe</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220805 00:02:09.875" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220805 00:02:09.874" endtime="20220805 00:02:11.744"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220805 00:02:11.745" endtime="20220805 00:02:11.863"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>20s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220805 00:02:11.863" endtime="20220805 00:02:11.865"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=https://netbanking.hdfcbank.com/netbanking/IpinResetUsingOTP.htm</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220805 00:02:11.866" level="INFO">Opening url 'https://netbanking.hdfcbank.com/netbanking/IpinResetUsingOTP.htm'</msg>
+<status status="PASS" starttime="20220805 00:02:11.866" endtime="20220805 00:02:14.595"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//img[@alt='Go']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220805 00:02:14.596" level="INFO">Clicking element 'xpath=//img[@alt='Go']'.</msg>
+<status status="PASS" starttime="20220805 00:02:14.596" endtime="20220805 00:02:14.670"/>
+</kw>
+<kw name="Alert Should Be Present" library="SeleniumLibrary">
+<arg>text=Customer ID${SPACE}${SPACE}cannot be left blank.</arg>
+<arg>action=ACCEPT</arg>
+<arg>timeout=50s</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<msg timestamp="20220805 00:02:14.672" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:50</msg>
+<status status="PASS" starttime="20220805 00:02:14.671" endtime="20220805 00:02:14.681"/>
+</kw>
+<tag>6</tag>
+<status status="PASS" starttime="20220805 00:02:09.872" endtime="20220805 00:02:14.682"/>
+</test>
+<status status="PASS" starttime="20220805 00:02:02.771" endtime="20220805 00:02:14.684"/>
+</suite>
+<status status="PASS" starttime="20220805 00:02:02.726" endtime="20220805 00:02:14.712"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0" skip="0">5</stat>
+<stat pass="1" fail="0" skip="0">6</stat>
+<stat pass="1" fail="0" skip="0">OP-5</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Demo5 Selenium Suite">Demo5 Selenium Suite</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="Demo3 Alert Suite">Demo3 Alert Suite</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="Demo3 Alert Suite">Demo3 Alert Suite.Demo3 Alert Suite</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20220803 19:49:11.552" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=103.0.5060.134)
-Stacktrace:
-Backtrace:
-	Ordinal0 [0x002F6463+2188387]
-	Ordinal0 [0x0028E461+1762401]
-	Ordinal0 [0x001A3D78+802168]
-	Ordinal0 [0x0018C680+706176]
-	Ordinal0 [0x001EF169+1110377]
-	Ordinal0 [0x001FC3C2+1164226]
-	Ordinal0 [0x001EC5F6+1099254]
-	Ordinal0 [0x001C6BE0+945120]
-	Ordinal0 [0x001C7AD6+948950]
-	GetHandleVerifier [0x005971F2+2712546]
-	GetHandleVerifier [0x0058886D+2652765]
-	GetHandleVerifier [0x0038002A+520730]
-	GetHandleVerifier [0x0037EE06+516086]
-	Ordinal0 [0x0029468B+1787531]
-	Ordinal0 [0x00298E88+1805960]
-	Ordinal0 [0x00298F75+1806197]
-	Ordinal0 [0x002A1DF1+1842673]
-	BaseThreadInitThunk [0x749B6359+25]
-	RtlGetAppContainerNamedObjectPath [0x77208944+228]
-	RtlGetAppContainerNamedObjectPath [0x77208914+180]
-	(No symbol) [0x00000000]
-</msg>
 </errors>
 </robot>

@@ -56,6 +56,14 @@ TC7
     Remove Values From List    ${fruits}    banana
     Log To Console    ${fruits}
 
+TC8
+    @{fruits}    Create List    banana    orange     apple
+    
+    FOR    ${fruit}    IN    @{fruits}
+        Log To Console    ${fruit}
+        
+    END
+
 *** Comments ***
     Task 1
     Get all directory and print it 

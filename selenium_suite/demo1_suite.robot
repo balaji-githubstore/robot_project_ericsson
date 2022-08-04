@@ -1,5 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary 
+Library      AutoRecorder
 
 *** Test Cases ***
 TC1
@@ -33,11 +34,13 @@ TC2
 TC3
     Open Browser    browser=chrome    executable_path=${EXECDIR}${/}driver${/}chromedriver.exe
     Maximize Browser Window
-    Set Selenium Implicit Wait    20s
+    Set Selenium Implicit Wait    0s
     Go To    url=https://goto.com/meeting/
     Run Keyword And Ignore Error    Click Element    id=truste-consent-button
     
-    Click Element    partial link=Try Free
+    Click Element    partial link=Try Free123
+    [Teardown]     Close Browser
+    # [Teardown]    Run Keywords     Capture Page Screenshot   AND  Close Browser
 
 TC4
     Open Browser    browser=chrome    executable_path=${EXECDIR}${/}driver${/}chromedriver.exe
