@@ -1,0 +1,9 @@
+DEB [20220805-16:39:40.940] thr=2   paramiko.transport: [chan 1] Max packet in: 32768 bytes
+DEB [20220805-16:39:40.944] thr=1   paramiko.transport: [chan 1] Max packet out: 32768 bytes
+DEB [20220805-16:39:40.945] thr=1   paramiko.transport: Secsh channel 1 opened.
+DEB [20220805-16:39:40.964] thr=1   paramiko.transport: [chan 1] Sesch channel 1 request ok
+INF [20220805-16:39:41.148] thr=2   paramiko.transport.sftp: [chan 1] Opened sftp connection (server version 3)
+DEB [20220805-16:39:41.148] thr=2   paramiko.transport.sftp: [chan 1] normalize(b'.')
+DEB [20220805-16:39:41.153] thr=2   paramiko.transport.sftp: [chan 1] stat(b'C:\\')
+DEB [20220805-16:39:41.160] thr=2   paramiko.transport.sftp: [chan 1] listdir(b'C:\\')
+DEB [20220805-16:39:43.340] thr=1   paramiko.transport: EOF in transport thread

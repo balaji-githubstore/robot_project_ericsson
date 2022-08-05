@@ -1,66 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.2 on win32)" generated="20220805 13:59:40.077" rpa="false" schemaversion="3">
-<suite id="s1" name="Demo6 Win" source="d:\Mine\Company\Ericsson3\robot_project\selenium_suite\demo6_win.robot">
-<test id="s1-t1" name="TC3" line="27">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>browser=chrome</arg>
-<arg>executable_path=${EXECDIR}${/}driver${/}chromedriver.exe</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220805 13:59:40.549" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220805 13:59:40.549" endtime="20220805 13:59:42.505"/>
+<robot generator="Robot 5.0.1 (Python 3.10.2 on win32)" generated="20220805 16:39:38.809" rpa="false" schemaversion="3">
+<suite id="s1" name="Demo1" source="d:\Mine\Company\Ericsson3\robot_project\ssh_suite\demo1.robot">
+<test id="s1-t1" name="TC2" line="22">
+<kw name="Open Connection" library="SSHLibrary">
+<arg>host=192.168.1.7</arg>
+<arg>port=22</arg>
+<doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
+<status status="PASS" starttime="20220805 16:39:39.186" endtime="20220805 16:39:39.186"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220805 13:59:42.524" endtime="20220805 13:59:42.664"/>
+<kw name="Login" library="SSHLibrary">
+<arg>username=jidi</arg>
+<arg>password=123456</arg>
+<doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
+<msg timestamp="20220805 16:39:39.187" level="INFO">Logging into '192.168.1.7:22' as 'jidi'.</msg>
+<msg timestamp="20220805 16:39:40.936" level="INFO">Read output: [2J[m[HMicrosoft Windows [Version 10.0.19044.1766]]0;C:\Windows\system32\conhost.exe[?25h
+(c) Microsoft Corporation. All rights reserved.
+[47X
+jidi@DESKTOP-R6BD6UD C:\Users\JiDi&gt;[12X]0;Administrator: C:\Windows\system32\conhost.exe</msg>
+<status status="PASS" starttime="20220805 16:39:39.187" endtime="20220805 16:39:40.936"/>
 </kw>
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<arg>20s</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220805 13:59:42.668" endtime="20220805 13:59:42.675"/>
+<kw name="Enable Ssh Logging" library="SSHLibrary">
+<arg>${EXECDIR}${/}files${/}myserver.log</arg>
+<doc>Enables logging of SSH protocol output to given ``logfile``.</doc>
+<msg timestamp="20220805 16:39:40.939" level="INFO" html="true">SSH log is written to &lt;a href="D:\Mine\Company\Ericsson3\robot_project\files\myserver.log"&gt;file&lt;/a&gt;.</msg>
+<status status="PASS" starttime="20220805 16:39:40.937" endtime="20220805 16:39:40.939"/>
 </kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>url=https://www.ilovepdf.com/pdf_to_word</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220805 13:59:42.682" level="INFO">Opening url 'https://www.ilovepdf.com/pdf_to_word'</msg>
-<status status="PASS" starttime="20220805 13:59:42.681" endtime="20220805 13:59:46.270"/>
+<kw name="List Directories In Directory" library="SSHLibrary">
+<var>@{directories}</var>
+<arg>path=C:${/}</arg>
+<doc>A wrapper for `List Directory` that returns only directories.</doc>
+<msg timestamp="20220805 16:39:41.149" level="INFO">[chan 1] Opened sftp connection (server version 3)</msg>
+<msg timestamp="20220805 16:39:41.198" level="INFO">20 directories:
+$Recycle.Bin
+$WINDOWS.~BT
+$WinREAgent
+$Windows.~WS
+Components
+Demo1
+Documents and Settings
+ESD
+Intel
+MSOCache
+Mine
+PerfLogs
+Program Files
+Program Files (x86)
+ProgramData
+Recovery
+System Volume Information
+Users
+Windows
+android</msg>
+<msg timestamp="20220805 16:39:41.198" level="INFO">@{directories} = [ $Recycle.Bin | $WINDOWS.~BT | $WinREAgent | $Windows.~WS | Components | Demo1 | Documents and Settings | ESD | Intel | MSOCache | Mine | PerfLogs | Program Files | Program Files (x86) | ProgramData ...</msg>
+<status status="PASS" starttime="20220805 16:39:40.940" endtime="20220805 16:39:41.198"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>id=pickfiles</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220805 13:59:46.272" level="INFO">Clicking element 'id=pickfiles'.</msg>
-<status status="PASS" starttime="20220805 13:59:46.271" endtime="20220805 13:59:46.355"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${directories}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220805 16:39:41.200" endtime="20220805 16:39:41.202"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220805 13:59:47.359" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220805 13:59:46.357" endtime="20220805 13:59:47.359"/>
-</kw>
-<kw name="Control Focus" library="AutoItLibrary">
-<arg>Open</arg>
-<arg>${EMPTY}</arg>
-<arg>Edit1</arg>
-<doc>method ControlFocus</doc>
-<status status="PASS" starttime="20220805 13:59:47.360" endtime="20220805 13:59:47.436"/>
-</kw>
-<kw name="Control Set Text" library="AutoItLibrary">
-<arg>Open</arg>
-<arg>${EMPTY}</arg>
-<arg>Edit1</arg>
-<arg>D:${/}Mine${/}Balaji-Profile.pdf</arg>
-<doc>method ControlSetText</doc>
-<status status="PASS" starttime="20220805 13:59:47.438" endtime="20220805 13:59:47.442"/>
-</kw>
-<kw name="Control Click" library="AutoItLibrary">
-<arg>Open</arg>
-<arg>${EMPTY}</arg>
-<arg>Button1</arg>
-<doc>method ControlClick</doc>
-<status status="PASS" starttime="20220805 13:59:47.443" endtime="20220805 13:59:47.456"/>
-</kw>
-<status status="PASS" starttime="20220805 13:59:40.521" endtime="20220805 13:59:47.460"/>
+<status status="PASS" starttime="20220805 16:39:39.185" endtime="20220805 16:39:41.203"/>
 </test>
-<status status="PASS" starttime="20220805 13:59:40.079" endtime="20220805 13:59:47.466"/>
+<status status="PASS" starttime="20220805 16:39:38.815" endtime="20220805 16:39:41.207"/>
 </suite>
 <statistics>
 <total>
@@ -69,7 +70,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Demo6 Win">Demo6 Win</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Demo1">Demo1</stat>
 </suite>
 </statistics>
 <errors>
