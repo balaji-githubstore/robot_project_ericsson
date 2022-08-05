@@ -1,67 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.2 on win32)" generated="20220805 16:39:38.809" rpa="false" schemaversion="3">
-<suite id="s1" name="Demo1" source="d:\Mine\Company\Ericsson3\robot_project\ssh_suite\demo1.robot">
-<test id="s1-t1" name="TC2" line="22">
-<kw name="Open Connection" library="SSHLibrary">
-<arg>host=192.168.1.7</arg>
-<arg>port=22</arg>
-<doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
-<status status="PASS" starttime="20220805 16:39:39.186" endtime="20220805 16:39:39.186"/>
+<robot generator="Robot 5.0.1 (Python 3.10.2 on win32)" generated="20220805 19:43:35.802" rpa="false" schemaversion="3">
+<suite id="s1" name="Demo7 Grid" source="d:\Mine\Company\Ericsson3\robot_project\selenium_suite\demo7_grid.robot">
+<test id="s1-t1" name="TC2" line="16">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<arg>remote_url=http://172.17.67.65:4444</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220805 19:43:36.447" level="INFO">Opening browser 'chrome' to base url 'None' through remote server at 'http://172.17.67.65:4444'.</msg>
+<status status="PASS" starttime="20220805 19:43:36.447" endtime="20220805 19:43:40.215"/>
 </kw>
-<kw name="Login" library="SSHLibrary">
-<arg>username=jidi</arg>
-<arg>password=123456</arg>
-<doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
-<msg timestamp="20220805 16:39:39.187" level="INFO">Logging into '192.168.1.7:22' as 'jidi'.</msg>
-<msg timestamp="20220805 16:39:40.936" level="INFO">Read output: [2J[m[HMicrosoft Windows [Version 10.0.19044.1766]]0;C:\Windows\system32\conhost.exe[?25h
-(c) Microsoft Corporation. All rights reserved.
-[47X
-jidi@DESKTOP-R6BD6UD C:\Users\JiDi&gt;[12X]0;Administrator: C:\Windows\system32\conhost.exe</msg>
-<status status="PASS" starttime="20220805 16:39:39.187" endtime="20220805 16:39:40.936"/>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<arg>remote_url=http://172.17.67.65:4444</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220805 19:43:40.218" level="INFO">Opening browser 'chrome' to base url 'None' through remote server at 'http://172.17.67.65:4444'.</msg>
+<status status="PASS" starttime="20220805 19:43:40.217" endtime="20220805 19:43:43.799"/>
 </kw>
-<kw name="Enable Ssh Logging" library="SSHLibrary">
-<arg>${EXECDIR}${/}files${/}myserver.log</arg>
-<doc>Enables logging of SSH protocol output to given ``logfile``.</doc>
-<msg timestamp="20220805 16:39:40.939" level="INFO" html="true">SSH log is written to &lt;a href="D:\Mine\Company\Ericsson3\robot_project\files\myserver.log"&gt;file&lt;/a&gt;.</msg>
-<status status="PASS" starttime="20220805 16:39:40.937" endtime="20220805 16:39:40.939"/>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<arg>remote_url=http://172.17.67.65:4444</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220805 19:43:43.800" level="INFO">Opening browser 'chrome' to base url 'None' through remote server at 'http://172.17.67.65:4444'.</msg>
+<status status="PASS" starttime="20220805 19:43:43.799" endtime="20220805 19:43:46.542"/>
 </kw>
-<kw name="List Directories In Directory" library="SSHLibrary">
-<var>@{directories}</var>
-<arg>path=C:${/}</arg>
-<doc>A wrapper for `List Directory` that returns only directories.</doc>
-<msg timestamp="20220805 16:39:41.149" level="INFO">[chan 1] Opened sftp connection (server version 3)</msg>
-<msg timestamp="20220805 16:39:41.198" level="INFO">20 directories:
-$Recycle.Bin
-$WINDOWS.~BT
-$WinREAgent
-$Windows.~WS
-Components
-Demo1
-Documents and Settings
-ESD
-Intel
-MSOCache
-Mine
-PerfLogs
-Program Files
-Program Files (x86)
-ProgramData
-Recovery
-System Volume Information
-Users
-Windows
-android</msg>
-<msg timestamp="20220805 16:39:41.198" level="INFO">@{directories} = [ $Recycle.Bin | $WINDOWS.~BT | $WinREAgent | $Windows.~WS | Components | Demo1 | Documents and Settings | ESD | Intel | MSOCache | Mine | PerfLogs | Program Files | Program Files (x86) | ProgramData ...</msg>
-<status status="PASS" starttime="20220805 16:39:40.940" endtime="20220805 16:39:41.198"/>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<arg>remote_url=http://172.17.67.65:4444</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220805 19:43:46.543" level="INFO">Opening browser 'chrome' to base url 'None' through remote server at 'http://172.17.67.65:4444'.</msg>
+<status status="PASS" starttime="20220805 19:43:46.543" endtime="20220805 19:43:49.323"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${directories}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220805 16:39:41.200" endtime="20220805 16:39:41.202"/>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<arg>remote_url=http://172.17.67.65:4444</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220805 19:43:49.325" level="INFO">Opening browser 'chrome' to base url 'None' through remote server at 'http://172.17.67.65:4444'.</msg>
+<status status="PASS" starttime="20220805 19:43:49.324" endtime="20220805 19:43:52.752"/>
 </kw>
-<status status="PASS" starttime="20220805 16:39:39.185" endtime="20220805 16:39:41.203"/>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<arg>remote_url=http://172.17.67.65:4444</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220805 19:43:52.753" level="INFO">Opening browser 'chrome' to base url 'None' through remote server at 'http://172.17.67.65:4444'.</msg>
+<status status="PASS" starttime="20220805 19:43:52.752" endtime="20220805 19:43:58.244"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<arg>remote_url=http://172.17.67.65:4444</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220805 19:43:58.245" level="INFO">Opening browser 'chrome' to base url 'None' through remote server at 'http://172.17.67.65:4444'.</msg>
+<status status="PASS" starttime="20220805 19:43:58.245" endtime="20220805 19:44:04.231"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<arg>remote_url=http://172.17.67.65:4444</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220805 19:44:04.243" level="INFO">Opening browser 'chrome' to base url 'None' through remote server at 'http://172.17.67.65:4444'.</msg>
+<status status="PASS" starttime="20220805 19:44:04.242" endtime="20220805 19:44:13.823"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220805 19:44:23.826" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20220805 19:44:13.824" endtime="20220805 19:44:23.827"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220805 19:44:23.829" endtime="20220805 19:44:25.755"/>
+</kw>
+<status status="PASS" starttime="20220805 19:43:36.445" endtime="20220805 19:44:25.758"/>
 </test>
-<status status="PASS" starttime="20220805 16:39:38.815" endtime="20220805 16:39:41.207"/>
+<status status="PASS" starttime="20220805 19:43:35.805" endtime="20220805 19:44:25.762"/>
 </suite>
 <statistics>
 <total>
@@ -70,7 +79,7 @@ android</msg>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Demo1">Demo1</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Demo7 Grid">Demo7 Grid</stat>
 </suite>
 </statistics>
 <errors>

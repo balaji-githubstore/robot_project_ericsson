@@ -17,10 +17,11 @@ TC1
     
 
 TC2
-    [Tags]    6
+    [Tags]    high    OP-11 
     Open Browser    browser=chrome    executable_path=${EXECDIR}${/}driver${/}chromedriver.exe
     Maximize Browser Window
     Set Selenium Implicit Wait    20s
+    Fail
     Go To    url=https://netbanking.hdfcbank.com/netbanking/IpinResetUsingOTP.htm
     Click Element    xpath=//img[@alt='Go']
     Alert Should Be Present    text=Customer ID${SPACE}${SPACE}cannot be left blank.    action=ACCEPT    timeout=50s 

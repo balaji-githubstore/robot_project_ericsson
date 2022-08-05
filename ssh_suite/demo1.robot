@@ -1,6 +1,6 @@
 *** Settings ***
 Library             SSHLibrary
-
+# Library        Fla
 # Suite Setup         Connect Jidi
 # Suite Teardown      Close Connection
 
@@ -10,9 +10,6 @@ Connect Jidi
     [Arguments]    ${alias}
     Open Connection    host=192.168.1.7    port=22    alias=${alias}
     Login    username=jidi    password=123456
-    
-
-
 
 
 *** Test Cases ***
@@ -66,13 +63,17 @@ TC8
     ${output}    Read Command Output
     Log To Console    ${output}
 
-#  TC9
-#     Open Connection    host=192.168.1.7    port=22
-#     Login    username=jidi    password=123456
-#     Start Command    python
-#     Write    text=a=10   
-#     ${output}    Read
-#     Log To Console    ${output}
+ TC9
+    Open Connection    host=192.168.1.7    port=22
+    Login    username=jidi    password=123456
+    # # Execute Command    python
+    # Write    python 
+    # ${stdout}=	Read Until	python
+    # Log To Console    ${stdout}
+    Start Command    appium
+    Sleep    3s
+    ${stdout}    Execute Command    print('jie')
+    Log To Console    ${stdout} 
 
 
 TC8
@@ -99,3 +100,12 @@ TC8
 
     # Get Connections
     Close All Connections
+TC9
+    Open Connection    host=192.168.1.7    alias=jidi    port=22
+    Login    username=jidi    password=123456
+    Start Command    java -jar
+    Start Command    robot /opt/login.robot 
+
+
+TC10 
+    Click  identifier=//MenuItem[@Name='File']

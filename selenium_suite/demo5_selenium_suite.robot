@@ -4,6 +4,7 @@ Library    OperatingSystem
 
 *** Test Cases ***
 TC1 Upload File
+    high    smoke   smoke
     Open Browser    browser=chrome    executable_path=${EXECDIR}${/}driver${/}chromedriver.exe
     Maximize Browser Window
     Set Selenium Implicit Wait    20s
@@ -32,6 +33,7 @@ TC3 Mouse Activity
 
 
 TC4 CSS Selector 
+    [Tags]    high    smoke
     Open Browser    browser=chrome    executable_path=${EXECDIR}${/}driver${/}chromedriver.exe
     Maximize Browser Window
     Set Selenium Implicit Wait    20s
@@ -100,11 +102,13 @@ TC7 Royal
     Set Selenium Speed    1s
     Go To    url=https://www.royalcaribbean.com/
     Run Keyword And Ignore Error    Click Element    xpath=//*[name()='svg' and @class='email-capture__close']
+    
     Click Element    id=rciHeaderSignIn      
     Click Element    link=Create an account
     Input Text    xpath=//input[@data-placeholder="First name/Given name"]    Balaji
     Click Element    xpath=//span[text()='Month']
-    Click Element    xpath=//span[contains(text(),'April')]
+    Scroll Element Into View    xpath=//span[contains(text(),'Dece')]
+    Click Element    xpath=//span[contains(text(),'Dece')]
 
 TC8 Download
     Open Browser    browser=chrome    executable_path=${EXECDIR}${/}driver${/}chromedriver.exe
@@ -141,3 +145,33 @@ TC10
     Click Element    tag=a
 
     Close All Browsers
+
+
+
+TC11
+    Open Browser    browser=chrome    alias=b1    executable_path=${EXECDIR}${/}driver${/}chromedriver.exe 
+    Go To    url=https://datatables.net/extensions/select/examples/initialisation/checkbox.html
+    Table Should Contain    xpath=//table[@id='example']    Brenden Wagner
+    Table Row Should Contain    xpath=//table[@id='example']    1    Position
+
+TC12
+    Open Browser    browser=chrome    alias=b1    executable_path=${EXECDIR}${/}driver${/}chromedriver.exe 
+    Go To    url=https://datatables.net/extensions/select/examples/initialisation/checkbox.html
+    
+    ${rowcount}    Get Element Count    xpath=//table[@id='example']/tbody/tr
+
+    FOR    ${i}    IN RANGE    1    ${rowcount}+1    1
+        ${name1}    Get Text    xpath=//table[@id='example']/tbody/tr[${i}]/td[2]
+        Log To Console    ${name1}    
+    END
+
+TC12
+    Open Browser    browser=chrome    alias=b1    executable_path=${EXECDIR}${/}driver${/}chromedriver.exe 
+    Go To    url=https://datatables.net/extensions/select/examples/initialisation/checkbox.html
+    
+    ${rowcount}    Get Element Count    xpath=//table[@id='example']/tbody/tr
+
+    FOR    ${i}    IN RANGE    1    ${rowcount}+1    1
+        ${name1}    Get Text    xpath=//table[@id='example']/tbody/tr[${i}]/td[2]
+        Log To Console    ${name1}    
+    END 
