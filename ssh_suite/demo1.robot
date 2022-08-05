@@ -98,5 +98,4 @@ TC8
     Switch Connection    m1
 
     # Get Connections
-
     Close All Connections
